@@ -65,7 +65,7 @@ bool IsProperty(const std::string& str) {
     }
     std::string key = Trim(trimmedStr.substr(0, s));
     // key can't be empty
-    if (key == "") {
+    if (key.empty()) {
         return false;
     }
     return true;
@@ -87,7 +87,7 @@ bool IsComment(const std::string& str) {
 
 bool IsEmptyLine(const std::string& str) {
     std::string trimmedStr = LeftTrim(str);
-    return trimmedStr == "";
+    return trimmedStr.empty();
 }
 
 } // namespace PropertiesUtils
