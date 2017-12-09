@@ -59,7 +59,7 @@ std::string Trim(const std::string& str) {
 
 bool IsProperty(const std::string& str) {
     std::string trimmedStr = LeftTrim(str);
-    std::string::size_type s = trimmedStr.find_first_of("=");
+    std::string::size_type s = trimmedStr.find_first_of('=');
     if (s == std::string::npos) {
         return false;
     }
@@ -73,7 +73,7 @@ bool IsProperty(const std::string& str) {
 
 std::pair<std::string, std::string> ParseProperty(const std::string& str) {
     std::string trimmedStr = LeftTrim(str);
-    std::string::size_type s = trimmedStr.find_first_of("=");
+    std::string::size_type s = trimmedStr.find_first_of('=');
     std::string key = Trim(trimmedStr.substr(0, s));
     std::string value = LeftTrim(trimmedStr.substr(s+1));
 
