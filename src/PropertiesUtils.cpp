@@ -65,10 +65,7 @@ bool IsProperty(const std::string& str) {
     }
     std::string key = Trim(trimmedStr.substr(0, s));
     // key can't be empty
-    if (key.empty()) {
-        return false;
-    }
-    return true;
+    return !key.empty();
 }
 
 std::pair<std::string, std::string> ParseProperty(const std::string& str) {
